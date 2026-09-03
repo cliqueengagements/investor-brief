@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let Africa Build: Africa's venture engine for digital financial infrastructure</title>
+<style>
+  /*
+   * The typefaces are served from this site, not from Google. The brief now
+   * lives on letafricabuild.com, where clause 03 of the privacy policy says
+   * nothing on a normal page is fetched from another company. Loading fonts
+   * from Google here would have made that false for this page.
+   *
+   * These are the same faces and the same files the rest of the site uses.
+   */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 300 900;
+  font-stretch: 75% 112%;
+  font-display: swap;
+  src: url(/assets/fonts/archivo-italic-300_900-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 300 900;
+  font-stretch: 75% 112%;
+  font-display: swap;
+  src: url(/assets/fonts/archivo-italic-300_900-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 300 900;
+  font-stretch: 75% 112%;
+  font-display: swap;
+  src: url(/assets/fonts/archivo-normal-300_900-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 300 900;
+  font-stretch: 75% 112%;
+  font-display: swap;
+  src: url(/assets/fonts/archivo-normal-300_900-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/instrument-serif-italic-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/instrument-serif-italic-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/instrument-serif-normal-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/instrument-serif-normal-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/jetbrains-mono-normal-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/jetbrains-mono-normal-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/assets/fonts/jetbrains-mono-normal-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/assets/fonts/jetbrains-mono-normal-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+  :root {
+    --brand-orange: #F7931A;
+    --brand-orange-soft: #FFB65A;
+    --brand-orange-deep: #C97108;
+    
+    --ink: #07070A;
+    --ink-deep: #050508;
+    --ink-soft: #0C0C10;
+    --paper: #F4F1EA;
+    --paper-warm: #EDE6D3;
+    --ochre: #F7931A;
+    --clay: #B8642E;
+    --chalk: #D4E876;
+    --dust: #8B8578;
+    --line: rgba(213, 232, 118, 0.15);
+    --rule: rgba(245, 241, 232, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* Serif display */
+  .display {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .display-italic {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 60;
+    font-weight: 300;
+  }
+
+  /* Mono */
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  /* Eyebrow labels */
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--chalk);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--chalk);
+    display: inline-block;
+  }
+
+  /* Section spacing */
+  section {
+    padding: 140px 0;
+    position: relative;
+  }
+
+  /* Signature dotted paths */
+  .dotted-path {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  /* ================= NAV ================= */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 40px;
+    z-index: 100;
+    background: linear-gradient(180deg, var(--ink) 0%, rgba(15, 20, 32, 0.85) 60%, transparent 100%);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .brand {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+  }
+  nav .brand .accent {
+    color: var(--chalk);
+    font-style: italic;
+    font-weight: 300;
+  }
+  nav .doc-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--dust);
+    letter-spacing: 0.1em;
+  }
+
+  /* ================= HERO ================= */
+  .hero {
+    min-height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-mark {
+    position: absolute;
+    right: -80px;
+    top: 60px;
+    width: 620px;
+    height: 620px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-lockup {
+    margin-bottom: 60px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(56px, 8vw, 116px);
+    margin-bottom: 32px;
+    max-width: 1000px;
+  }
+  .hero-title .em {
+    color: var(--chalk);
+  }
+  .hero-title .em-italic {
+    color: var(--brand-orange);
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+
+  .hero-sub {
+    font-size: 20px;
+    color: var(--paper);
+    max-width: 640px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 60px;
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    max-width: 1000px;
+  }
+  .hero-meta-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--dust);
+    margin-bottom: 8px;
+  }
+  .hero-meta-item .value {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 40;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--paper);
+  }
+
+  /* ================= SECTIONS ================= */
+  .section-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: baseline;
+    margin-bottom: 80px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-header .marker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--chalk);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .section-header h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 900px;
+  }
+  .section-header h2 .italic {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--brand-orange);
+  }
+
+  /* ================= PROBLEM ================= */
+  .problem-body {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .problem-lede {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90, "SOFT" 30;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.35;
+    color: var(--paper);
+    grid-column: 2 / 3;
+  }
+  .problem-lede em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .problem-support {
+    grid-column: 3 / 4;
+    padding-left: 40px;
+    border-left: 1px solid var(--rule);
+  }
+  .problem-support p {
+    color: var(--dust);
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .problem-support p:last-child { margin-bottom: 0; }
+
+  .problem-stats {
+    grid-column: 2 / 4;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding-top: 60px;
+    border-top: 1px solid var(--rule);
+  }
+  .problem-stat .n {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+    font-weight: 300;
+    font-size: 88px;
+    line-height: 1;
+    color: var(--chalk);
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+  .problem-stat .n .unit {
+    font-size: 32px;
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+    margin-left: 4px;
+  }
+  .problem-stat .label {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 14px;
+    color: var(--paper);
+    line-height: 1.5;
+    max-width: 260px;
+  }
+
+  /* ================= SOLUTION ================= */
+  .solution {
+    background: var(--ink-deep);
+    position: relative;
+  }
+
+  .solution-thesis {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+  .solution-thesis-body {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90, "SOFT" 30;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--paper);
+    max-width: 780px;
+  }
+  .solution-thesis-body em {
+    color: var(--chalk);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* Pipeline stages */
+  .pipeline {
+    display: grid;
+    grid-template-columns: 200px repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+  }
+  .pipeline-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--chalk);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+
+  .stage {
+    padding: 32px 24px;
+    border: 1px solid var(--rule);
+    background: rgba(213, 232, 118, 0.02);
+    position: relative;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+  }
+  .stage-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--dust);
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .stage-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.15;
+    color: var(--paper);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .stage-title em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .stage-body {
+    font-size: 13px;
+    color: var(--dust);
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+  .stage-arrow {
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--chalk);
+    opacity: 0.4;
+    font-size: 20px;
+    z-index: 2;
+  }
+  .stage:last-child .stage-arrow { display: none; }
+
+  /* ================= MARKET ================= */
+  .market {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .market .eyebrow {
+    color: var(--clay);
+  }
+  .market .eyebrow::before { background: var(--clay); }
+  .market .section-header {
+    border-bottom-color: rgba(15, 20, 32, 0.12);
+  }
+  .market .section-header .marker { color: var(--clay); }
+  .market .section-header h2 { color: var(--ink); }
+  .market .section-header h2 .italic { color: var(--clay); }
+
+  .market-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+  .market-lede {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90, "SOFT" 30;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.35;
+    color: var(--ink);
+    grid-column: 2 / 4;
+    max-width: 900px;
+  }
+  .market-lede em {
+    color: var(--clay);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .market-charts {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .chart-card {
+    padding: 32px;
+    border: 1px solid rgba(15, 20, 32, 0.12);
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .chart-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .chart-note {
+    font-size: 12px;
+    color: var(--dust);
+    margin-bottom: 24px;
+  }
+  .chart-svg {
+    width: 100%;
+    height: 180px;
+  }
+  .chart-callout {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(15, 20, 32, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .chart-callout .n {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--clay);
+  }
+  .chart-callout .lbl {
+    font-size: 12px;
+    color: var(--ink);
+    max-width: 180px;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  /* ================= PILLARS ================= */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 80px;
+  }
+  .pillar {
+    padding: 40px 32px;
+    border: 1px solid var(--rule);
+    position: relative;
+  }
+  .pillar-marker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--chalk);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+  }
+  .pillar-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--paper);
+    margin-bottom: 20px;
+  }
+  .pillar-title em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .pillar-body {
+    color: var(--dust);
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+  .pillar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+  .pillar-list li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--paper);
+    padding: 6px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .pillar-list li::before {
+    content: '·';
+    color: var(--chalk);
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  /* ================= TRACTION ================= */
+  .traction {
+    background: var(--ink-soft);
+  }
+  .traction-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 100px;
+  }
+  .metric {
+    padding: 32px 0;
+    border-top: 2px solid var(--chalk);
+  }
+  .metric-value {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 1;
+    color: var(--paper);
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .metric-value .unit {
+    font-size: 28px;
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .metric-value .plus {
+    color: var(--chalk);
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+  }
+  .metric-label {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 14px;
+    color: var(--paper);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .metric-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dust);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  .traction-table {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+  }
+  .traction-table-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--chalk);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .traction-rows {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--rule);
+  }
+  .traction-row {
+    display: grid;
+    grid-template-columns: 260px 1fr 100px;
+    gap: 40px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .traction-row-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 40;
+    font-size: 18px;
+    color: var(--paper);
+    font-weight: 500;
+  }
+  .traction-row-desc {
+    font-size: 13px;
+    color: var(--dust);
+    line-height: 1.5;
+  }
+  .traction-row-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--chalk);
+  }
+  .traction-row-status.pending { color: var(--brand-orange); }
+
+  /* ================= BUSINESS MODEL ================= */
+  .revenue-diagram {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    margin-top: 60px;
+  }
+  .revenue-streams {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .revenue-stream {
+    padding: 32px;
+    border: 1px solid var(--rule);
+    background: linear-gradient(135deg, rgba(213, 232, 118, 0.03) 0%, transparent 50%);
+    position: relative;
+  }
+  .revenue-stream-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--chalk);
+    padding: 4px 10px;
+    border: 1px solid var(--chalk);
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .revenue-stream h4 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--paper);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .revenue-stream p {
+    font-size: 13px;
+    color: var(--dust);
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+  .revenue-stream-num {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 36px;
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+  .revenue-stream-num-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dust);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ================= BACKER CIRCLE ================= */
+  .backer-detail {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+  }
+  .backer-body {
+    grid-column: 2 / 3;
+  }
+  .backer-body h3 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90, "SOFT" 30;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.25;
+    color: var(--paper);
+    margin-bottom: 32px;
+  }
+  .backer-body h3 em {
+    color: var(--chalk);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .backer-body p {
+    color: var(--paper);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+
+  .backer-benefits {
+    grid-column: 3 / 4;
+    padding-left: 40px;
+    border-left: 1px solid var(--rule);
+  }
+  .backer-benefits-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--chalk);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .benefit {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+  }
+  .benefit:last-child { border-bottom: none; }
+  .benefit-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--chalk);
+    letter-spacing: 0.1em;
+  }
+  .benefit-text {
+    font-size: 14px;
+    color: var(--paper);
+    line-height: 1.5;
+  }
+  .benefit-text strong {
+    font-weight: 500;
+    color: var(--paper);
+  }
+
+  .backer-terms {
+    grid-column: 2 / 4;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .term {
+    text-align: left;
+  }
+  .term-value {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90;
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--brand-orange);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .term-value em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--chalk);
+    font-size: 20px;
+  }
+  .term-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dust);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  /* ================= PORTFOLIO MATH ================= */
+  .math-example {
+    background: var(--paper-warm);
+    color: var(--ink);
+    padding: 100px 0;
+    margin: 40px 0;
+  }
+  .math-example .container { display: block; }
+  .math-example .eyebrow { color: var(--clay); }
+  .math-example .eyebrow::before { background: var(--clay); }
+
+  .math-body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+  }
+  .math-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+  }
+  .math-title em {
+    color: var(--clay);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .math-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  .math-step {
+    background: var(--paper);
+    padding: 28px;
+    border: 1px solid rgba(15, 20, 32, 0.15);
+    position: relative;
+  }
+  .math-step-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--clay);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .math-step-value {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .math-step-value em {
+    color: var(--clay);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .math-step-desc {
+    font-size: 12px;
+    color: var(--dust);
+    line-height: 1.5;
+  }
+  .math-arrow {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    color: var(--clay);
+    font-size: 24px;
+    z-index: 2;
+    opacity: 0.5;
+  }
+  .math-step:last-child .math-arrow { display: none; }
+
+  .math-note {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 40;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.5;
+    max-width: 700px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(15, 20, 32, 0.15);
+  }
+
+  /* ================= FOUNDER ================= */
+  .founder-block {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+  }
+  .founder-portrait {
+    grid-column: 2 / 3;
+  }
+  .founder-name {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.05;
+    color: var(--paper);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .founder-name em {
+    color: var(--chalk);
+    font-style: italic;
+    font-weight: 300;
+    display: block;
+    font-size: 32px;
+    margin-top: 4px;
+  }
+  .founder-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--brand-orange);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .founder-bio p {
+    color: var(--paper);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  .founder-cred {
+    grid-column: 3 / 4;
+    padding-left: 40px;
+    border-left: 1px solid var(--rule);
+  }
+  .cred-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .cred-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cred-item:last-child { border-bottom: none; }
+  .cred-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--chalk);
+    letter-spacing: 0.1em;
+    padding-top: 4px;
+  }
+  .cred-body {
+    font-size: 14px;
+    color: var(--paper);
+    line-height: 1.5;
+  }
+  .cred-body strong {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cred-body span {
+    color: var(--dust);
+    font-size: 13px;
+  }
+
+  /* ================= ROADMAP ================= */
+  .roadmap {
+    background: var(--ink-deep);
+  }
+  .roadmap-phases {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+  }
+  .phase {
+    padding: 40px 0 40px;
+    border-top: 2px solid var(--ochre);
+    position: relative;
+  }
+  .phase:nth-child(3) { border-top-color: var(--chalk); }
+  .phase:nth-child(4) { border-top-color: var(--clay); }
+
+  .phase-marker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--dust);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .phase-months {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--chalk);
+    margin-bottom: 24px;
+  }
+  .phase-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 90;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--paper);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .phase-title em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .phase-body {
+    color: var(--dust);
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+  .phase-outcomes {
+    list-style: none;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  .phase-outcomes li {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--paper);
+    padding: 4px 0;
+    line-height: 1.5;
+    padding-left: 20px;
+    position: relative;
+  }
+  .phase-outcomes li::before {
+    content: '→';
+    color: var(--chalk);
+    position: absolute;
+    left: 0;
+  }
+
+  /* ================= USE OF FUNDS ================= */
+  .use-of-funds {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    margin-top: 60px;
+  }
+  .fund-bar {
+    grid-column: 2 / 3;
+  }
+  .fund-bar-total {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+    font-weight: 300;
+    font-size: 88px;
+    color: var(--paper);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+  .fund-bar-total em {
+    color: var(--chalk);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 40px;
+  }
+  .fund-bar-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--dust);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .bar-viz {
+    display: flex;
+    height: 60px;
+    margin-bottom: 32px;
+    border: 1px solid var(--rule);
+  }
+  .bar-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .fund-breakdown {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+  .fund-item {
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  .fund-item-dot {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 12px;
+  }
+  .fund-item-pct {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--paper);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .fund-item-pct em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-size: 18px;
+  }
+  .fund-item-title {
+    font-size: 13px;
+    color: var(--paper);
+    font-weight: 500;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .fund-item-desc {
+    font-size: 11px;
+    color: var(--dust);
+    line-height: 1.4;
+  }
+
+  /* ================= ASK ================= */
+  .ask {
+    padding: 180px 0 140px;
+    background: var(--ink-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ask-bg-mark {
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    width: 700px;
+    height: 700px;
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  .ask-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .ask-headline {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 1.05;
+    color: var(--paper);
+    max-width: 900px;
+    letter-spacing: -0.02em;
+    margin-bottom: 60px;
+  }
+  .ask-headline em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .ask-headline .accent {
+    color: var(--chalk);
+  }
+
+  .ask-detail {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+  }
+  .ask-body {
+    grid-column: 2 / 3;
+  }
+  .ask-body h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--chalk);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .ask-body p {
+    color: var(--paper);
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+
+  .ask-terms {
+    grid-column: 3 / 4;
+    padding-left: 40px;
+    border-left: 1px solid var(--rule);
+  }
+  .ask-terms-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ask-terms-row:last-child { border-bottom: none; }
+  .ask-terms-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--dust);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .ask-terms-value {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 20px;
+    color: var(--paper);
+    font-weight: 500;
+  }
+  .ask-terms-value em {
+    color: var(--brand-orange);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ================= FOOTER ================= */
+  footer {
+    padding: 80px 40px 60px;
+    border-top: 1px solid var(--rule);
+    background: var(--ink);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .footer-brand {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-variation-settings: "opsz" 144;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--paper);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .footer-brand em {
+    color: var(--chalk);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .footer-tag {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--dust);
+    max-width: 300px;
+    line-height: 1.5;
+  }
+  .footer-col-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--chalk);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .footer-line {
+    font-size: 13px;
+    color: var(--paper);
+    line-height: 1.7;
+  }
+  .footer-line a {
+    color: var(--paper);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .footer-line a:hover { color: var(--chalk); border-bottom-color: var(--chalk); }
+
+  .footer-meta {
+    max-width: 1240px;
+    margin: 60px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dust);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 900px) {
+    .container { padding: 0 24px; }
+    section { padding: 80px 0; }
+    .hero-meta { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .section-header { grid-template-columns: 1fr; gap: 24px; }
+    .problem-body, .solution-thesis, .market-grid, .backer-detail, .founder-block, .use-of-funds, .revenue-diagram, .ask-detail { grid-template-columns: 1fr; gap: 32px; }
+    .problem-lede, .market-lede, .backer-body, .founder-portrait, .fund-bar, .ask-body, .backer-benefits, .founder-cred, .ask-terms { grid-column: 1; padding-left: 0; border-left: none; }
+    .pipeline { grid-template-columns: 1fr; }
+    .stage-arrow { display: none; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .market-charts, .traction-metrics, .revenue-streams, .fund-breakdown, .roadmap-phases, .math-flow, .backer-terms { grid-template-columns: 1fr; }
+    .traction-row { grid-template-columns: 1fr; gap: 8px; }
+    .traction-row-status { text-align: left; }
+    .math-arrow { display: none; }
+    .hero-title { font-size: 48px; }
+  }
+
+  @media print {
+    nav, .hero-bg-mark, .ask-bg-mark { display: none; }
+    body { background: white; color: black; }
+    section { page-break-inside: avoid; padding: 40px 0; }
+  }
+
+  /* MOBILE FIX PACK - v2 */
+  html { overflow-x: hidden; }
+  body { overflow-x: hidden; word-wrap: break-word; overflow-wrap: break-word; }
+
+  /* Force fluid sizing on all text-holding grid items */
+  .hero-title { font-size: clamp(32px, 8vw, 100px) !important; }
+  .hero-sub { font-size: clamp(15px, 2.2vw, 20px) !important; }
+  .section-header h2 { font-size: clamp(28px, 5vw, 60px) !important; word-wrap: break-word; }
+  .problem-lede, .market-lede, .solution-thesis-body { font-size: clamp(18px, 3vw, 28px) !important; }
+  .ask-headline { font-size: clamp(30px, 6vw, 76px) !important; word-wrap: break-word; }
+  .founder-name { font-size: clamp(28px, 5vw, 52px) !important; }
+  .math-title { font-size: clamp(24px, 4.5vw, 44px) !important; }
+  .fund-bar-total { font-size: clamp(52px, 9vw, 88px) !important; word-wrap: break-word; }
+  .problem-stat .n, .metric-value { word-wrap: break-word; }
+
+  /* Prevent grids from overflowing */
+  .container { max-width: 100%; overflow-wrap: break-word; }
+  .hero-meta { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .traction-metrics { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .problem-stats { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .market-charts { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .pillars-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .revenue-streams { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .backer-terms { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .math-flow { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .fund-breakdown { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .footer-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+  /* Nav on small screens */
+  @media (max-width: 640px) {
+    nav .doc-meta { display: none; }
+    nav { padding: 16px 20px; }
+    section { padding: 60px 0; }
+  }
+
+  /* Break long words / URLs */
+  * { word-wrap: break-word; overflow-wrap: break-word; }
+  /* hyphens: auto was a safety net for narrow screens. Fraunces was narrow enough never to trigger it; Instrument Serif is not, and it started splitting "infrastructure" and "imported" mid-word in the hero. overflow-wrap only breaks a word that cannot fit a line at all, which is the case the net was actually for. */
+  h1, h2, h3, h4, .display, .hero-title, .section-header h2 { hyphens: manual; overflow-wrap: break-word; }
+
+  /* Ensure charts scale */
+  .chart-svg { max-width: 100%; height: auto; }
+
+  /* Fund source cards */
+  .fund-sources { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 32px; }
+  .fund-source { padding: 24px; border: 1px solid var(--rule); background: rgba(247, 147, 26, 0.03); }
+  .fund-source-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--brand-orange); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
+  .fund-source-amount { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(24px, 4vw, 36px); font-weight: 400; color: var(--paper); line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
+  .fund-source-amount em { color: var(--chalk); font-style: italic; font-size: 0.5em; }
+  .fund-source-desc { font-size: 12px; color: var(--dust); line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="brand">Let Africa Build<span class="accent">.</span></div>
+  <div class="doc-meta">Investor Brief — Confidential</div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <svg class="hero-bg-mark" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- African continent inspired abstract mark with dotted network -->
+    <g fill="none" stroke="#D4E876" stroke-width="1">
+      <circle cx="300" cy="180" r="4" fill="#D4E876"/>
+      <circle cx="360" cy="240" r="4" fill="#D4E876"/>
+      <circle cx="280" cy="280" r="4" fill="#D4E876"/>
+      <circle cx="340" cy="340" r="4" fill="#D4E876"/>
+      <circle cx="240" cy="380" r="4" fill="#D4E876"/>
+      <circle cx="300" cy="420" r="4" fill="#D4E876"/>
+      <circle cx="380" cy="380" r="4" fill="#D4E876"/>
+      <line x1="300" y1="180" x2="360" y2="240" stroke-dasharray="2 4"/>
+      <line x1="360" y1="240" x2="280" y2="280" stroke-dasharray="2 4"/>
+      <line x1="280" y1="280" x2="340" y2="340" stroke-dasharray="2 4"/>
+      <line x1="340" y1="340" x2="240" y2="380" stroke-dasharray="2 4"/>
+      <line x1="240" y1="380" x2="300" y2="420" stroke-dasharray="2 4"/>
+      <line x1="300" y1="420" x2="380" y2="380" stroke-dasharray="2 4"/>
+      <line x1="380" y1="380" x2="340" y2="340" stroke-dasharray="2 4"/>
+      <line x1="360" y1="240" x2="340" y2="340" stroke-dasharray="2 4"/>
+    </g>
+  </svg>
+
+  <div class="container hero-content">
+    <div class="hero-lockup">
+      <div class="hero-eyebrow eyebrow">Investor Brief · Q3 2026</div>
+      <h1 class="display hero-title">
+        Africa's next financial infrastructure <span class="em-italic">will not be imported.</span> It will be <span class="em">built here.</span>
+      </h1>
+      <p class="hero-sub">
+        Let Africa Build is the venture engine that forms founders and ships companies to build Africa's payment, savings, credit, and remittance systems for African markets.
+      </p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="label">Raise</div>
+          <div class="value">$3M</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="label">Structure</div>
+          <div class="value">Multi-channel</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="label">Horizon</div>
+          <div class="value">3–5 years</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="label">Prepared By</div>
+          <div class="value">Dr. Eniola Samuel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROBLEM ========== -->
+<section id="problem">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">01 · The Problem</div>
+      <h2>Africa's fintech is <span class="italic">imported</span>, adapted, and priced for markets it was never designed for.</h2>
+    </div>
+
+    <div class="problem-body">
+      <p class="problem-lede">
+        Hundreds of millions of Africans remain outside the formal financial system because the products designed for them <em>were designed elsewhere</em> for higher-income users, smartphone-first behavior, and stable currencies.
+      </p>
+      <div class="problem-support">
+        <p>The continent's builders are ready. Africa's developer population has grown faster than any other region for five straight years.</p>
+        <p>The infrastructure they build on has matured. Bitcoin, Lightning, stablecoins, and mobile money now form a workable stack for African financial products.</p>
+        <p>What's missing is the machine that produces founders who know how to combine them for African users at scale.</p>
+      </div>
+
+      <div class="problem-stats">
+        <div class="problem-stat">
+          <div class="n">57<span class="unit">%</span></div>
+          <div class="label">of Africans remain outside formal banking</div>
+        </div>
+        <div class="problem-stat">
+          <div class="n">$1.3<span class="unit">T</span></div>
+          <div class="label">stablecoin transaction volume in 2024; Africa now leads emerging-market adoption</div>
+        </div>
+        <div class="problem-stat">
+          <div class="n">1.4<span class="unit">M</span></div>
+          <div class="label">African software developers, growing 40% year over year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOLUTION ========== -->
+<section id="solution" class="solution">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">02 · The Solution</div>
+      <h2>A venture engine: not a training program, not an incubator, <span class="italic">a pipeline</span>.</h2>
+    </div>
+
+    <div class="solution-thesis">
+      <div></div>
+      <p class="solution-thesis-body">
+        LAB is the machine that turns African developers into founders, and turns founders into the companies building <em>the financial systems Africa actually needs</em>. Four stages, one pipeline, measured on economic outputs.
+      </p>
+    </div>
+
+    <div class="pipeline">
+      <div class="pipeline-label">The Pipeline</div>
+
+      <div class="stage">
+        <div class="stage-num">Stage 01</div>
+        <div class="stage-title"><em>Select</em> the right founders</div>
+        <div class="stage-body">Rigorous selection identifies developers with the technical depth and commercial instincts to become founders. Not everyone graduates. This is where quality begins.</div>
+        <div class="stage-arrow">→</div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">Stage 02</div>
+        <div class="stage-title"><em>Form</em> them technically and commercially</div>
+        <div class="stage-body">Bitcoin, Lightning, stablecoins, mobile money, agent networks, informal-to-formal transitions, and African regulatory realities. Both engineering and market fluency.</div>
+        <div class="stage-arrow">→</div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">Stage 03</div>
+        <div class="stage-title"><em>Incubate</em> their ventures</div>
+        <div class="stage-body">Structured incubation transforms founder theses into shipped products with paying users or committed pilot partners. LAB takes equity in every venture.</div>
+        <div class="stage-arrow">→</div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">Stage 04</div>
+        <div class="stage-title"><em>Connect</em> to capital and markets</div>
+        <div class="stage-body">Ventures flow into a network of aligned capital partners, corporate anchors, and government relationships. LAB is the top of the funnel for African financial infrastructure venture capital.</div>
+        <div class="stage-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MARKET ========== -->
+<section class="market">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">03 · Market Context</div>
+      <h2>Two waves converging. <span class="italic">One window.</span></h2>
+    </div>
+
+    <div class="market-grid">
+      <div></div>
+      <p class="market-lede">
+        African fintech is entering its second decade of institutional capital, while stablecoin and Bitcoin infrastructure have finally matured to serve the continent. <em>Founders who can operate at that intersection will define the next decade.</em>
+      </p>
+
+      <div class="market-charts">
+        <div class="chart-card">
+          <div class="chart-title">Stablecoin adoption · Sub-Saharan Africa</div>
+          <div class="chart-note">Transaction volume, indexed. Source: Chainalysis, 2024</div>
+          <svg class="chart-svg" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="#B8642E" stroke-width="2">
+              <path d="M 20 160 L 80 150 L 140 130 L 200 95 L 260 55 L 320 35 L 380 20" />
+            </g>
+            <g fill="#B8642E">
+              <circle cx="20" cy="160" r="3"/>
+              <circle cx="80" cy="150" r="3"/>
+              <circle cx="140" cy="130" r="3"/>
+              <circle cx="200" cy="95" r="3"/>
+              <circle cx="260" cy="55" r="3"/>
+              <circle cx="320" cy="35" r="3"/>
+              <circle cx="380" cy="20" r="4"/>
+            </g>
+            <g fill="#8B8578" font-family="JetBrains Mono" font-size="10">
+              <text x="20" y="176">2018</text>
+              <text x="140" y="176">2020</text>
+              <text x="260" y="176">2022</text>
+              <text x="365" y="176">2024</text>
+            </g>
+          </svg>
+          <div class="chart-callout">
+            <div class="n">12×</div>
+            <div class="lbl">growth in stablecoin transaction volume, 2020 to 2024</div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-title">African fintech venture funding</div>
+          <div class="chart-note">Total capital deployed, USD billions. Source: Partech Africa</div>
+          <svg class="chart-svg" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#B8642E">
+              <rect x="30" y="145" width="30" height="15"/>
+              <rect x="80" y="130" width="30" height="30"/>
+              <rect x="130" y="105" width="30" height="55"/>
+              <rect x="180" y="65" width="30" height="95"/>
+              <rect x="230" y="45" width="30" height="115"/>
+              <rect x="280" y="80" width="30" height="80"/>
+              <rect x="330" y="35" width="30" height="125"/>
+            </g>
+            <g fill="#8B8578" font-family="JetBrains Mono" font-size="10">
+              <text x="35" y="176">'18</text>
+              <text x="85" y="176">'19</text>
+              <text x="135" y="176">'20</text>
+              <text x="185" y="176">'21</text>
+              <text x="235" y="176">'22</text>
+              <text x="285" y="176">'23</text>
+              <text x="335" y="176">'24</text>
+            </g>
+          </svg>
+          <div class="chart-callout">
+            <div class="n">$4.6B</div>
+            <div class="lbl">deployed into African fintech in 2024, majority still in payments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PILLARS / WHAT WE DO ========== -->
+<section id="pillars">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">04 · What LAB Does</div>
+      <h2>Three pillars, <span class="italic">one engine</span>.</h2>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-marker">01 · Formation</div>
+        <div class="pillar-title"><em>Developer</em> formation</div>
+        <div class="pillar-body">
+          Cohort-based technical and commercial training designed specifically for African financial infrastructure builders. Bitcoin, Lightning, stablecoins, mobile money, agent networks, and regulatory context.
+        </div>
+        <ul class="pillar-list">
+          <li>16-week structured cohorts</li>
+          <li>Selection-based, not open-enrollment</li>
+          <li>Every graduate ships something public</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-marker">02 · Incubation</div>
+        <div class="pillar-title"><em>Venture</em> incubation</div>
+        <div class="pillar-body">
+          Selected cohort founders enter structured incubation to transform theses into companies. Technical mentorship, commercial guidance, network access, and small pre-seed capital.
+        </div>
+        <ul class="pillar-list">
+          <li>LAB takes equity in every venture</li>
+          <li>Ventures ship real products with users</li>
+          <li>Pipeline to aligned capital partners</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-marker">03 · Infrastructure</div>
+        <div class="pillar-title"><em>Open-source</em> infrastructure</div>
+        <div class="pillar-body">
+          Every cohort produces public GitHub artifacts and tooling. The LAB Open Source Builders Fund on Artizen supports downstream builders across the Bitcoin ecosystem.
+        </div>
+        <ul class="pillar-list">
+          <li>Public curriculum &amp; LMS</li>
+          <li>$38K sponsor-match pool, Round 2 open</li>
+          <li>Five named tracks for builders</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRACTION ========== -->
+<section class="traction">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">05 · Traction</div>
+      <h2>Not theoretical. <span class="italic">Already shipping.</span></h2>
+    </div>
+
+    <div class="traction-metrics">
+      <div class="metric">
+        <div class="metric-value">800<span class="plus">+</span></div>
+        <div class="metric-label">Developers onboarded across the LAB ecosystem</div>
+        <div class="metric-note">Verified</div>
+      </div>
+        <div class="metric">
+          <div class="metric-value">$167<span class="unit">K</span></div>
+          <div class="metric-label">Raised to date: $147,335 on Artizen in Season 7 toward a $1M target, plus a $20,000 Stacks Foundation grant</div>
+          <div class="metric-note">Verified</div>
+        </div>
+      <div class="metric">
+        <div class="metric-value">06</div>
+        <div class="metric-label">Prototype Bitcoin ecosystem tools shipped, by community builders and by LAB</div>
+        <div class="metric-note">Live URLs</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">08</div>
+        <div class="metric-label">Active university partnerships across Nigeria</div>
+        <div class="metric-note">Committed</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">$38<span class="unit">K</span></div>
+        <div class="metric-label">Sponsor-match pool on Artizen, up from $20K at launch and open to more</div>
+        <div class="metric-note">Round 2 live</div>
+      </div>
+    </div>
+
+    <div class="traction-table">
+      <div class="traction-table-header">Institutional<br>Partnerships</div>
+      <div class="traction-rows">
+        <div class="traction-row">
+          <div class="traction-row-title">Lions Club International</div>
+          <div class="traction-row-desc">IPDG-level engagement, district structure, three youth events including the Agege Youth Center activation</div>
+          <div class="traction-row-status">Active</div>
+        </div>
+        <div class="traction-row">
+          <div class="traction-row-title">Artizen Foundation</div>
+          <div class="traction-row-desc">$147,335 raised in Season 7 toward a $1M Artizen target. LAB Open Source Builders Fund operational: Round 1 delivered, Round 2 open with 12 projects and a $38K matching pool</div>
+          <div class="traction-row-status">Active</div>
+        </div>
+        <div class="traction-row">
+          <div class="traction-row-title">University network</div>
+          <div class="traction-row-desc">UNILAG, UI, UniAbuja, UniPort, Yaba Tech, LASU, Baze, Polytechnic Ibadan — VC-level engagement and inbound formal partnership requests</div>
+          <div class="traction-row-status">Active</div>
+        </div>
+        <div class="traction-row">
+          <div class="traction-row-title">NYSC / SAED</div>
+          <div class="traction-row-desc">Active conversations with named contacts on integrating LAB into national youth service technical training</div>
+          <div class="traction-row-status pending">Advancing</div>
+        </div>
+        <div class="traction-row">
+          <div class="traction-row-title">Stacks Foundation</div>
+          <div class="traction-row-desc">Institutional grantee 2025–2026; foundation-level support committed toward future Stacks Endowment application</div>
+          <div class="traction-row-status">Alumnus</div>
+        </div>
+        <div class="traction-row">
+          <div class="traction-row-title">SmartX Finance</div>
+          <div class="traction-row-desc">The first product out of the engine, built by the LAB team. Raised $31,697 on Artizen in Season 6 from prizes, direct community support and matched funding. Fourteen agent skills, five registered upstream on the AIBTC registry, write transactions proven on Bitcoin mainnet, paid endpoints charging per call over x402</div>
+          <div class="traction-row-status">V1 in audit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BUSINESS MODEL ========== -->
+<section id="business">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">06 · Business Model</div>
+      <h2>Seven streams. <span class="italic">Three years to self-sustaining.</span></h2>
+    </div>
+
+    <div class="revenue-diagram">
+      <div class="pipeline-label">How LAB earns</div>
+        <div class="revenue-streams">
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Recurring</div>
+            <h4>Founding Backer Circle</h4>
+            <p>Twenty founding members at $25,000 annually. Members receive equity in LAB, right of first look at every incubated venture, carry participation, and quarterly council seats. Opens after Cohort 1 delivers.</p>
+            <div class="revenue-stream-num">$500K</div>
+            <div class="revenue-stream-num-note">Annual recurring at full subscription</div>
+          </div>
+
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Programmes</div>
+            <h4>Sponsor-funded programmes</h4>
+            <p>Seats are bought by corporates, NGOs and government agencies, not by students. A bank sponsors 100 seats for financial inclusion; an NGO funds 300 for women in blockchain. Hackathons are corporate-funded in exchange for early access to talent.</p>
+            <div class="revenue-stream-num">50-70%</div>
+            <div class="revenue-stream-num-note">Of Year 1 operating costs, target</div>
+          </div>
+
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Infrastructure</div>
+            <h4>LAB-owned hubs</h4>
+            <p>Venue rental, co-working memberships for alumni and startups, paid corporate training, and hosting fees from partners. Owning rather than renting is what turns a cost centre into an asset, the model ALX and Web3Bridge already run profitably in Lagos.</p>
+            <div class="revenue-stream-num">Y2</div>
+            <div class="revenue-stream-num-note">Three hubs generating monthly income</div>
+          </div>
+
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Recurring</div>
+            <h4>Node-as-a-Service</h4>
+            <p>Local Stacks and Bitcoin node access sold as API subscriptions. A free student tier, a paid tier for startups, premium SLAs for fintechs and exchanges, and infrastructure partnerships with ISPs.</p>
+            <div class="revenue-stream-num">Y2</div>
+            <div class="revenue-stream-num-note">Subscriptions live</div>
+          </div>
+
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Product</div>
+            <h4>LAB-built infrastructure</h4>
+            <p>LAB builds on the same rails its founders learn. SmartX Finance is the first: fourteen agent skills, five reviewed and registered upstream on the AIBTC registry, write transactions proven on Bitcoin mainnet, and paid endpoints charging per call today over x402. V1 is in audit before public launch, and finishing it is part of what this raise funds.</p>
+            <div class="revenue-stream-num">Live</div>
+            <div class="revenue-stream-num-note">Paid endpoints on mainnet</div>
+          </div>
+
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Portfolio</div>
+            <h4>Venture equity &amp; carry</h4>
+            <p>LAB takes 5&ndash;10% equity in every incubated venture, plus demo day sponsorship and success fees when portfolio companies raise. Carry structure shared with Backer Circle members.</p>
+            <div class="revenue-stream-num">10-20&times;</div>
+            <div class="revenue-stream-num-note">Return on capital at portfolio maturity</div>
+          </div>
+
+          <div class="revenue-stream">
+            <div class="revenue-stream-tag">Institutional</div>
+            <h4>Advisory, anchors &amp; grants</h4>
+            <p>Curriculum development for universities, regulatory and youth-programme advisory for governments, and paid reports for corporates. Alongside named corporate anchor contracts and ecosystem grants: Artizen, Btrust, Spiral, OpenSats, and a Stacks Endowment application in year two.</p>
+            <div class="revenue-stream-num">$1M</div>
+            <div class="revenue-stream-num-note">Via Artizen, 3&ndash;5 year target</div>
+          </div>
+
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BACKER CIRCLE DETAIL ========== -->
+<section id="backer">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">07 · The Founding Circle</div>
+      <h2>Twenty founding believers. <span class="italic">Deep alignment.</span></h2>
+    </div>
+
+    <div class="backer-detail">
+      <div class="pipeline-label">Structure</div>
+
+      <div class="backer-body">
+        <h3>The Founding Backer Circle is closed at <em>20 members</em>. Members are not passive capital.</h3>
+        <p>They anchor LAB's next decade with recurring commitment, take a small equity position in the venture engine itself, gain structured access to every venture LAB incubates, and shape strategic direction through a quarterly council.</p>
+        <p>The circle opens after LAB's first delivered cohort provides documented proof of the engine's output.</p>
+      </div>
+
+      <div class="backer-benefits">
+        <div class="backer-benefits-title">What Members Receive</div>
+        <div class="benefit">
+          <div class="benefit-num">01</div>
+          <div class="benefit-text"><strong>LAB entity equity</strong> - 10–15% distributed across the circle, roughly 0.5–0.75% per member</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">02</div>
+          <div class="benefit-text"><strong>Right of first look</strong> at every LAB-incubated venture with priority allocation on standard investment terms</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">03</div>
+          <div class="benefit-text"><strong>Portfolio carry</strong> - 15–20% share of LAB's proceeds from venture exits, distributed across members</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">04</div>
+          <div class="benefit-text"><strong>Quarterly Council seat</strong> shaping LAB strategic direction. Not startup governance</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">05</div>
+          <div class="benefit-text"><strong>Panelist &amp; mentor role</strong> during incubation cycles and hackathons</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">06</div>
+          <div class="benefit-text"><strong>Founding Backer status</strong> - permanent recognition, named partner standing</div>
+        </div>
+      </div>
+      <p class="disclaimer" style="margin-top:28px;font-size:13px;line-height:1.6;opacity:.55">
+        Terms above are indicative and subject to final legal structuring. The Founding Backer
+        Circle is not yet open and nothing in this document constitutes an offer to sell or a
+        solicitation to buy any security.
+      </p>
+
+      <div class="backer-terms">
+        <div class="term">
+          <div class="term-value">$25K<em>/yr</em></div>
+          <div class="term-label">Minimum annual per member</div>
+        </div>
+        <div class="term">
+          <div class="term-value">20</div>
+          <div class="term-label">Members total. Closed circle</div>
+        </div>
+        <div class="term">
+          <div class="term-value">10-15<em>%</em></div>
+          <div class="term-label">Total LAB equity across the circle</div>
+        </div>
+        <div class="term">
+          <div class="term-value">15-20<em>%</em></div>
+          <div class="term-label">Portfolio carry share</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PORTFOLIO MATH ========== -->
+<section class="math-example">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom: 40px;">Illustrative Portfolio Math</div>
+    <div class="math-body">
+      <div class="pipeline-label" style="color: var(--clay);">Sample flow</div>
+      <div>
+        <h3 class="math-title">How one <em>successful venture exit</em> flows through the LAB engine and back to members.</h3>
+
+        <div class="math-flow">
+          <div class="math-step">
+            <div class="math-step-tag">Step 01</div>
+            <div class="math-step-value">$10M</div>
+            <div class="math-step-desc">A LAB-incubated venture reaches acquisition or Series B at a $10M valuation-equivalent exit event</div>
+            <div class="math-arrow">→</div>
+          </div>
+          <div class="math-step">
+            <div class="math-step-tag">Step 02</div>
+            <div class="math-step-value">$1M</div>
+            <div class="math-step-desc">LAB's 10% equity position converts to $1M in proceeds from the exit</div>
+            <div class="math-arrow">→</div>
+          </div>
+          <div class="math-step">
+            <div class="math-step-tag">Step 03</div>
+            <div class="math-step-value">$200K</div>
+            <div class="math-step-desc">20% carry share ($200K) distributed proportionally across the 20 Founding Circle members</div>
+            <div class="math-arrow">→</div>
+          </div>
+          <div class="math-step">
+            <div class="math-step-tag">Step 04</div>
+            <div class="math-step-value">$10K</div>
+            <div class="math-step-desc">Each member receives approximately $10K carry from this single exit, against a $25K annual commitment alongside their existing venture equity positions</div>
+          </div>
+        </div>
+
+        <p class="math-note">Illustrative only. Actual returns depend on portfolio performance, timing, and specific venture outcomes. LAB's portfolio target is 10–20 incubated ventures over five years, with expected 2–3 material outcomes producing the majority of returns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOUNDER ========== -->
+<section id="founder">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">08 · The Founder</div>
+      <h2>Building this because <span class="italic">no one else was going to</span>.</h2>
+    </div>
+
+    <div class="founder-block">
+      <div class="pipeline-label">Founder</div>
+
+      <div class="founder-portrait">
+        <div class="founder-name">Dr. Eniola Samuel <em>Olawunmi</em></div>
+        <div class="founder-role">Founder &amp; CEO · Lagos, Nigeria</div>
+        <div class="founder-bio">
+          <p>Five years of building African developer ecosystems in Bitcoin infrastructure. Onboarded 300+ developers to Stacks before founding LAB. Trained across smart contract engineering, DeFi infrastructure, and autonomous agent design.</p>
+          <p>Delivered institutional grants. Structured formal partnerships across corporate, university, civic, and government relationships. Built and shipped 16 open-source autonomous DeFi agent skills, fourteen of which form the SmartX suite, five of which won the AIBTC × Bitflow Skills Competition. Ranked #8 of 657 agents on the aibtc.com earnings leaderboard, with verified on-chain earnings from 13 separate payers.</p>
+          <p>LAB is not a first attempt; it is a refined one built on the operational lessons of what actually works when forming African founders and connecting them to global infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="founder-cred">
+        <div class="pipeline-label" style="margin-bottom: 32px;">Track record</div>
+        <div class="cred-list">
+          <div class="cred-item">
+            <div class="cred-year">2026</div>
+            <div class="cred-body">
+              <strong>AIBTC × Bitflow Skills Competition</strong>
+              <span>5 competition wins; Stacks Alpha Engine approved upstream into aibtcdev/skills registry</span>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-year">2025</div>
+            <div class="cred-body">
+              <strong>Stacks Foundation Grant</strong>
+              <span>Institutional grantee under SIP-031. Delivered curriculum, partnerships, and ecosystem builds</span>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-year">2023–24</div>
+            <div class="cred-body">
+              <strong>African developer ecosystem</strong>
+              <span>Onboarded 300+ developers to Stacks; leadership across Bitcoin and Web3 communities in Nigeria</span>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-year">Ongoing</div>
+            <div class="cred-body">
+              <strong>Lions Club International</strong>
+              <span>Institutional leadership across national district structure; youth empowerment initiative underway & other accolades </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ROADMAP ========== -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">09 · Roadmap</div>
+      <h2>Inside a <span class="italic">decade-long arc</span>.</h2>
+    </div>
+
+      <div class="traction-table" style="margin-bottom:40px">
+        <div class="traction-table-header">2024<br>&rarr; 2035</div>
+        <div class="traction-rows">
+          <div class="traction-row">
+            <div class="traction-row-title">2024</div>
+            <div class="traction-row-desc">Foundation and proof of concept: incorporation in Nigeria, first Bitcoin developer training pilot, 300+ developers introduced</div>
+            <div class="traction-row-status">Complete</div>
+          </div>
+          <div class="traction-row">
+            <div class="traction-row-title">2025</div>
+            <div class="traction-row-desc">Reformation and structuring: LAB rebrand, alumni formation, Builder Fund structure, governance groundwork</div>
+            <div class="traction-row-status">Complete</div>
+          </div>
+          <div class="traction-row">
+            <div class="traction-row-title">2026 &ndash; 27</div>
+            <div class="traction-row-desc">Developer activation: university and hub activation tour, Cohort 1, Builder Fund live. The three phases below are the detail inside this band</div>
+            <div class="traction-row-status">In progress</div>
+          </div>
+          <div class="traction-row">
+            <div class="traction-row-title">2028 &ndash; 30</div>
+            <div class="traction-row-desc">Regional expansion: programmes beyond Nigeria, community hubs in key African cities</div>
+            <div class="traction-row-status">Upcoming</div>
+          </div>
+          <div class="traction-row">
+            <div class="traction-row-title">2031 &ndash; 35</div>
+            <div class="traction-row-desc">Continental builder network: builder-led infrastructure startups, global ecosystem partnerships</div>
+            <div class="traction-row-status">Upcoming</div>
+          </div>
+        </div>
+      </div>
+
+    <div class="roadmap-phases">
+      <div class="pipeline-label">Phased plan</div>
+
+      <div class="phase">
+        <div class="phase-marker">Phase I</div>
+        <div class="phase-months">2026 &ndash; 27</div>
+        <div class="phase-title"><em>Prove</em> the engine</div>
+        <div class="phase-body">Deliver Cohort 1 with 20–30 selected African founders. Publish curriculum, LMS, and every cohort output as a public open-source infrastructure.</div>
+        <ul class="phase-outcomes">
+          <li>Cohort 1 delivered</li>
+          <li>Curriculum &amp; LMS open-sourced</li>
+          <li>3–5 ventures identified for incubation</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-marker">Phase II</div>
+        <div class="phase-months">2027 &ndash; 28</div>
+        <div class="phase-title"><em>Structure</em> the capital</div>
+        <div class="phase-body">Publish Cohort 1 outcomes. Legally structure and launch the Founding Backer Circle. Approach corporate anchors with specific ventures for pilot partnerships.</div>
+        <ul class="phase-outcomes">
+          <li>Backer Circle closed</li>
+          <li>First corporate anchor signed</li>
+          <li>Cohort 2 selection begins</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-marker">Phase III</div>
+        <div class="phase-months">2028 &ndash; 30</div>
+        <div class="phase-title"><em>Scale</em> the pipeline</div>
+        <div class="phase-body">Deliver Cohort 2 at 30–50 founders. Formal LP-style institutional capital conversations. Apply to Btrust and Stacks Endowment with delivered track record.</div>
+        <ul class="phase-outcomes">
+          <li>Cohort 2 delivered</li>
+          <li>10–20 ventures in active portfolio</li>
+          <li>Institutional capital raised</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== USE OF FUNDS ========== -->
+<section id="use">
+  <div class="container">
+    <div class="section-header">
+      <div class="marker">10 · Use of Funds</div>
+      <h2>Where <span class="italic">$3M</span> comes from, and where it goes.</h2>
+    </div>
+
+    <div class="use-of-funds">
+      <div class="pipeline-label">Allocation</div>
+      <div class="fund-bar">
+        <div class="fund-bar-total">$3M<em class="unit"> over 3–5 years</em></div>
+        <div class="fund-bar-note">$1M via Artizen ($100K min per season) · $500K/yr via Founding Circle at full subscription ($25K min per member) · Balance via corporate anchors &amp; grants</div>
+
+        <div class="fund-sources">
+          <div class="fund-source">
+            <div class="fund-source-tag">Source 01 · Public capital</div>
+            <div class="fund-source-amount">$1M<em>/5yr</em></div>
+            <div class="fund-source-desc">Artizen matching-pool activation. Minimum $100K per season across LAB Open Source Builders Fund and aligned funds.</div>
+          </div>
+          <div class="fund-source">
+            <div class="fund-source-tag">Source 02 · Recurring</div>
+            <div class="fund-source-amount">$500K<em>/yr</em></div>
+            <div class="fund-source-desc">Founding Backer Circle. 20 members at $25,000 minimum annual commitment, recurring. $500K a year at full subscription; the circle fills over the period rather than in year one.</div>
+          </div>
+          <div class="fund-source">
+            <div class="fund-source-tag">Source 03 · Institutional</div>
+            <div class="fund-source-amount">$1M<em>+</em></div>
+            <div class="fund-source-desc">Corporate anchors, ecosystem grants (Btrust, Spiral, OpenSats), and Stacks Endowment application in year 2.</div>
+          </div>
+        </div>
+
+        <div class="bar-viz">
+          <div class="bar-segment" style="width: 35%; background: #F7931A;">35%</div>
+          <div class="bar-segment" style="width: 25%; background: #D4E876;">25%</div>
+          <div class="bar-segment" style="width: 20%; background: #B8642E; color: white;">20%</div>
+          <div class="bar-segment" style="width: 12%; background: #8B8578; color: white;">12%</div>
+          <div class="bar-segment" style="width: 8%; background: #EDE6D3;">8%</div>
+        </div>
+
+        <div class="fund-breakdown">
+          <div class="fund-item">
+            <div class="fund-item-dot" style="background: #F7931A;"></div>
+            <div class="fund-item-pct">35<em>%</em></div>
+            <div class="fund-item-title">Cohort operations</div>
+            <div class="fund-item-desc">Instructor stipends, cohort-participant stipends, hybrid delivery logistics, LMS operations</div>
+          </div>
+          <div class="fund-item">
+            <div class="fund-item-dot" style="background: #D4E876;"></div>
+            <div class="fund-item-pct">25<em>%</em></div>
+            <div class="fund-item-title">Venture incubation</div>
+            <div class="fund-item-desc">Pre-seed capital for selected ventures, technical mentorship, market entry support</div>
+          </div>
+          <div class="fund-item">
+            <div class="fund-item-dot" style="background: #B8642E;"></div>
+            <div class="fund-item-pct">20<em>%</em></div>
+            <div class="fund-item-title">Core team &amp; runway</div>
+            <div class="fund-item-desc">Founder, runway, six-engineer team, part-time community and operations support</div>
+          </div>
+          <div class="fund-item">
+            <div class="fund-item-dot" style="background: #8B8578;"></div>
+            <div class="fund-item-pct">12<em>%</em></div>
+            <div class="fund-item-title">Partnerships &amp; legal</div>
+            <div class="fund-item-desc">Corporate lawyer for Circle structure, partnership development, contract execution</div>
+          </div>
+          <div class="fund-item">
+            <div class="fund-item-dot" style="background: #EDE6D3;"></div>
+            <div class="fund-item-pct">8<em>%</em></div>
+            <div class="fund-item-title">Reserve</div>
+            <div class="fund-item-desc">Contingency for unexpected costs, opportunistic hiring, extended runway buffer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ASK ========== -->
+<section class="ask" id="ask">
+  <svg class="ask-bg-mark" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#F7931A" stroke-width="1">
+      <circle cx="350" cy="200" r="4" fill="#F7931A"/>
+      <circle cx="450" cy="280" r="4" fill="#F7931A"/>
+      <circle cx="280" cy="340" r="4" fill="#F7931A"/>
+      <circle cx="420" cy="420" r="4" fill="#F7931A"/>
+      <circle cx="320" cy="480" r="4" fill="#F7931A"/>
+      <circle cx="480" cy="500" r="4" fill="#F7931A"/>
+      <line x1="350" y1="200" x2="450" y2="280" stroke-dasharray="2 4"/>
+      <line x1="450" y1="280" x2="280" y2="340" stroke-dasharray="2 4"/>
+      <line x1="280" y1="340" x2="420" y2="420" stroke-dasharray="2 4"/>
+      <line x1="420" y1="420" x2="320" y2="480" stroke-dasharray="2 4"/>
+      <line x1="320" y1="480" x2="480" y2="500" stroke-dasharray="2 4"/>
+    </g>
+  </svg>
+
+  <div class="container ask-content">
+    <div class="eyebrow" style="margin-bottom: 40px;">11 · The Ask</div>
+
+    <h2 class="ask-headline">
+      <span class="accent">$3 million</span>, raised across three channels, to build Africa's <em>venture engine for digital financial infrastructure</em>.
+    </h2>
+
+    <div class="ask-detail">
+      <div></div>
+      <div class="ask-body">
+        <h4>What we are raising</h4>
+        <p>$3M in total capital deployed across three to five years. Three channels: $1M via Artizen matching-pool activation over 3–5 years ($100K minimum per season), up to $500K per year via the Founding Backer Circle, 20 members at $25,000 minimum annual commitment, filling over the period, and the balance from corporate anchor commitments and ecosystem grants.</p>
+        <p>We are opening the Founding Backer Circle to individuals and entities who understand African market realities and want to anchor a serious institution being built for the next decade.</p>
+      </div>
+
+      <div class="ask-terms">
+        <div class="ask-terms-row">
+          <div class="ask-terms-label">Total Raise</div>
+          <div class="ask-terms-value">$3M</div>
+        </div>
+        <div class="ask-terms-row">
+          <div class="ask-terms-label">Via Artizen</div>
+          <div class="ask-terms-value">$1M</div>
+        </div>
+        <div class="ask-terms-row">
+          <div class="ask-terms-label">Founding Circle</div>
+          <div class="ask-terms-value">$500K<em>/yr max</em></div>
+        </div>
+        <div class="ask-terms-row">
+          <div class="ask-terms-label">Per member min</div>
+          <div class="ask-terms-value">$25K<em>/yr</em></div>
+        </div>
+        <div class="ask-terms-row">
+          <div class="ask-terms-label">Members</div>
+          <div class="ask-terms-value">20</div>
+        </div>
+        <div class="ask-terms-row">
+          <div class="ask-terms-label">Horizon</div>
+          <div class="ask-terms-value">3–5 yrs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Let Africa Build<em>.</em></div>
+      <div class="footer-tag">Africa's venture engine for digital financial infrastructure.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-line">Dr. Eniola Samuel Olawunmi</div>
+      <div class="footer-line">Founder &amp; CEO</div>
+      <div class="footer-line"><a href="mailto:sam@letafricabuild.com">sam@letafricabuild.com</a></div>
+      <div class="footer-line"><a href="https://letafricabuild.com">letafricabuild.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Document</div>
+      <div class="footer-line">Investor Brief, Q3 2026</div>
+      <div class="footer-line">Confidential for named recipient</div>
+      <div class="footer-line">Version 3.0</div>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <div>Prepared by Dr. Eniola Samuel Olawunmi</div>
+    <div>Lagos · Nigeria</div>
+  </div>
+</footer>
+
+</body>
+</html>
